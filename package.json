@@ -1,0 +1,50 @@
+{
+  "name": "tree-slide-bar",
+  "version": "1.0.0",
+  "description": "Get a tree with a slide bar that can be used in Redux Form as a checklist component.",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "ionicons": "4.4.8",
+    "react": "16.6.3",
+    "react-dom": "16.6.3",
+    "react-scripts": "2.1.1",
+    "react-test-renderer": "16.3.2"
+  },
+  "peerDependencies": {
+    "react": "16.6.3",
+    "react-dom": "16.6.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build-examples": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiagoferrax/tree-slide-bar.git"
+  },
+  "keywords": [
+    "tree",
+    "slidebar",
+    "checklist"
+  ],
+  "author": "Thiago Ferraz V. da Cunha <thiagoferrax@gmail.com> (https://www.linkedin.com/in/thiagoferraz)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thiagoferrax/tree-slide-bar/issues"
+  },
+  "homepage": "https://github.com/thiagoferrax/tree-slide-bar#readme",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
