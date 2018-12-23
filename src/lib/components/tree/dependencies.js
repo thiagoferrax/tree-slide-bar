@@ -1,1 +1,1 @@
-//import 'ionicons/dist/css/ionicons.css'
+import 'ionicons/dist/css/ionicons.css'
