@@ -3,6 +3,7 @@ import Grid from '../layout/grid'
 import TreeItem from './treeItem'
 import './tree.css'
 import './dependencies'
+import {getInitialValuesMap} from './treeUtil'
 
 export default class Tree extends Component {  
 
@@ -10,7 +11,6 @@ export default class Tree extends Component {
         super(props)
         this.state = {tree: []}
         this.handleChange = this.handleChange.bind(this)
-        this.getInitialValuesMap = this.getInitialValuesMap.bind(this)
         this.getValuesMap = this.getValuesMap.bind(this)
     }
 
@@ -24,15 +24,8 @@ export default class Tree extends Component {
         }
     }    
 
-    getInitialValuesMap(tree, initialMap={}) {
-        return tree.reduce((map, node) => {
-                map[node.id] = {value:node.value, parentId:node.parentId}
-                return this.getInitialValuesMap(node.children, map)
-            }, initialMap)
-    }
-
     getValuesMap(tree, node, value) {
-        const initialValuesMap = this.getInitialValuesMap(tree)      
+        const initialValuesMap = getInitialValuesMap(tree)      
         const valuesMap = this.refreshNodesValues(initialValuesMap, node, value)
         return valuesMap
     }

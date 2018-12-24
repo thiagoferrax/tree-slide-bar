@@ -29,11 +29,13 @@ export default class TreeItem extends Component {
                 <div className={this.props.children ? 'parent' : ''}>
                     <div className="treeItem">
                         <If test={this.props.children}>
-                            <a onClick={() => this.toggleIcon(this.state.node)}>
-                                <i className={`${this.state.hideChildren ? 'icon ion-md-arrow-dropright' : 'icon ion-md-arrow-dropdown'} ml-2`} />
-                            </a>
                             <div className="treeItemDescription">
-                                <a onClick={() => this.toggleIcon(this.state.node)}>{this.state.node.description}</a>
+                                <a onClick={() => this.toggleIcon(this.state.node)}>
+                                    <i className={`${this.state.hideChildren ? 'icon ion-md-arrow-dropright' : 'icon ion-md-arrow-dropdown'}`} />
+                                </a>
+                                <div className="ml-1">
+                                    <a onClick={() => this.toggleIcon(this.state.node)}>{this.state.node.description}</a>
+                                </div>
                             </div>
                         </If>
                         <If test={!this.props.children}>
@@ -42,10 +44,10 @@ export default class TreeItem extends Component {
                         <SlideBar node={this.state.node} onChange={this.props.onChange} hideSlideBar={this.props.hideSlideBar} />
                         <If test={this.props.controls}>
                             <div className="controls">
-                                <button className='btn btn-default' onClick={e => {e.preventDefault(); this.props.onEdit(this.state.node)}}>
+                                <button className='btn btn-default' onClick={e => { e.preventDefault(); this.props.onEdit(this.state.node) }}>
                                     <i className='icon ion-md-create'></i>
                                 </button>
-                                <button className='btn btn-default' onClick={e => {e.preventDefault(); this.props.onDelete(this.state.node)}}>
+                                <button className='btn btn-default' onClick={e => { e.preventDefault(); this.props.onDelete(this.state.node) }}>
                                     <i className='icon ion-md-trash'></i>
                                 </button>
                             </div>
