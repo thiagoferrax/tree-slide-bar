@@ -3,12 +3,12 @@ import TreeSlideBar from "../lib";
 
 const App = () => (
   <div style={{ width: 640, margin: "15px auto" }}>
-    <h1>TreeSlideBar Example</h1>
+    <h1>TreeSlideBar Examples</h1>
     <hr/>
-    <TreeSlideBar cols='12' name='checklist' legend='My checklists' tree={[
+    <TreeSlideBar cols='12' name='checklist' legend='Code Review Checklist' tree={[
       {
         "id": 1,
-        "description": "Code Review Checklist",
+        "description": "Code Review",
         "parentId": null,
         "children": [
           {
@@ -42,10 +42,13 @@ const App = () => (
             "children": []
           }
         ]
-      },
+      } 
+    ]} />
+    <hr/>
+    <TreeSlideBar cols='12' name='checklist' legend='Basic Scrum Checklist' tree={[
       {
         "id": 7,
-        "description": "Scrum Checklist",
+        "description": "How is my Scrum?",
         "parentId": null,
         "children": [
           {
@@ -91,13 +94,13 @@ const App = () => (
                 "children": []
               },
               {
-                "id": 14,
+                "id": 15,
                 "description": "Sprint review",
                 "parentId": 12,
                 "children": []
               },
               {
-                "id": 15,
+                "id": 16,
                 "description": "Retrospective",
                 "parentId": 12,
                 "children": []
@@ -105,32 +108,32 @@ const App = () => (
             ]
           },
           {
-            "id": 16,
+            "id": 17,
             "description": "Artifacts",
             "parentId": 7,
             "children": [
               {
-                "id": 17,
-                "description": "Release plan",
-                "parentId": 16,
-                "children": []
-              },
-              {
                 "id": 18,
-                "description": "Product backlog",
-                "parentId": 16,
+                "description": "Release plan",
+                "parentId": 17,
                 "children": []
               },
               {
                 "id": 19,
-                "description": "Sprint backlog",
-                "parentId": 16,
+                "description": "Product backlog",
+                "parentId": 17,
                 "children": []
               },
               {
-                "id": 15,
+                "id": 20,
+                "description": "Sprint backlog",
+                "parentId": 17,
+                "children": []
+              },
+              {
+                "id": 21,
                 "description": "Burndown",
-                "parentId": 16,
+                "parentId": 17,
                 "children": []
               },
             ]
