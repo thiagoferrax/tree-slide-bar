@@ -41,17 +41,23 @@ export default class TreeItem extends Component {
                         <If test={!this.props.children}>
                             <div className="treeItemDescription">{this.state.node.description}</div>
                         </If>
-                        <SlideBar node={this.state.node} onChange={this.props.onChange} hideSlideBar={this.props.hideSlideBar} />
-                        <If test={this.props.controls}>
-                            <div className="controls">
-                                <button className='btn btn-default' onClick={e => { e.preventDefault(); this.props.onEdit(this.state.node) }}>
-                                    <i className='icon ion-md-create'></i>
-                                </button>
-                                <button className='btn btn-default' onClick={e => { e.preventDefault(); this.props.onDelete(this.state.node) }}>
-                                    <i className='icon ion-md-trash'></i>
-                                </button>
-                            </div>
-                        </If>
+                        <div className="controls">
+                            <SlideBar node={this.state.node} onChange={this.props.onChange} hideSlideBar={this.props.hideSlideBar} />
+                            <If test={this.props.onEdit || this.props.onDelete}>
+                                <div className='mr-3'>
+                                    <If test={this.props.onEdit} >
+                                        <button className='btn btn-default' onClick={e => { e.preventDefault(); this.props.onEdit(this.state.node) }}>
+                                            <i className='icon ion-md-create'></i>
+                                        </button>
+                                    </If>
+                                    <If test={this.props.onDelete} >
+                                        <button className='btn btn-default' onClick={e => { e.preventDefault(); this.props.onDelete(this.state.node) }}>
+                                            <i className='icon ion-md-trash'></i>
+                                        </button>
+                                    </If>
+                                </div>
+                            </If>
+                        </div>
                     </div>
                 </div>
                 <If test={this.props.children && !this.state.hideChildren}>
@@ -59,7 +65,7 @@ export default class TreeItem extends Component {
                         {this.props.children}
                     </div>
                 </If>
-            </div>
+            </div >
         )
     }
 }

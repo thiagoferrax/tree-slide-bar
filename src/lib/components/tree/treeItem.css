@@ -8,7 +8,7 @@
 .treeItemDescription {
     display: flex;
     align-items: center;
-    margin-left: 7px;
+    margin-left: 10px;
 }
 
 .rowItem > div {
@@ -16,7 +16,6 @@
 }
 .treeItem:hover {
     background-color: rgba(0, 0, 0, 0.1);
-    outline-color: #EDEDED;
 }
 
 a {

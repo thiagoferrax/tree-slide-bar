@@ -11,7 +11,7 @@
 }
 
 .controls {
-    position: absolute;
-    right: 4px;
-    bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
