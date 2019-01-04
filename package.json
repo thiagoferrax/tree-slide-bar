@@ -1,9 +1,9 @@
 {
   "name": "tree-slide-bar",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Get a tree with a slide bar that can be used in Redux Form as a checklist component.",
-  "main": "/dist/lib/index.js",
-  "module": "/dist/lib/index.js",
+  "main": "./dist/lib/index.js",
+  "module": "./dist/lib/index.js",
   "files": [
     "dist"
   ],
@@ -22,6 +22,7 @@
     "file-loader": "3.0.1",
     "ionicons": "4.4.8",
     "mocha": "5.2.0",
+    "parcel-bundler": "1.11.0",
     "react": "16.6.3",
     "react-dom": "16.6.3",
     "react-scripts": "2.1.1",
@@ -29,7 +30,8 @@
     "sinon": "7.2.2",
     "style-loader": "0.23.1",
     "webpack": "4.19.1",
-    "webpack-cli": "3.1.2"
+    "webpack-cli": "3.1.2",
+    "webpack-node-externals": "1.7.2"
   },
   "peerDependencies": {
     "react": "16.6.3",
@@ -66,7 +68,6 @@
   "dependencies": {
     "@babel/plugin-proposal-object-rest-spread": "7.2.0",
     "extract-text-webpack-plugin": "3.0.2",
-    "path": "0.12.7",
-    "webpack-node-externals": "1.7.2"
+    "path": "0.12.7"
   }
 }
