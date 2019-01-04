@@ -1,5 +1,6 @@
-const expect = require('chai').expect
-const Tree = require('./tree.jsx')
+import Chai from 'chai'
+const expect = Chai.expect
+import Tree from './tree.jsx'
 
 describe('Tree', function() {
     it('Should work!', function(){

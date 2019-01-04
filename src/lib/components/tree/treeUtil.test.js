@@ -1,5 +1,6 @@
-const expect = require('chai').expect
-const { getInitialValuesMap } = require('./treeUtil')
+import Chai from 'chai'
+const expect = Chai.expect
+import { getInitialValuesMap } from './treeUtil'
 
 describe('TreeUtil', function () {
     it('Get inital values map from a tree!', function () {
