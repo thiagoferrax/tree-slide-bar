@@ -1,11 +1,17 @@
+const path = require('path')
 const webpack = require('webpack')
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
+    entry: path.resolve(__dirname, './src/lib/index.js'),
     output: {
-        filename: 'index.js'
+      path: path.resolve(__dirname, './dist/lib'),
+      filename: 'index.js',
+      library: '',
+      libraryTarget: 'commonjs'
     },
+    externals: [nodeExternals()],
     module: {
         rules: [
             {
@@ -17,11 +23,12 @@ module.exports = {
             },
             {
                 test: /\.m?jsx?$/,
-                exclude: /node_modules/,
+                exclude: /(node_modules|bower_components)/,
                 use: {
                   loader: 'babel-loader',
                   options: {
-                    presets: ['@babel/preset-env', '@babel/react']
+                    presets: ['@babel/preset-env', '@babel/react'],
+                    plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/plugin-transform-runtime']                    
                   }
                 }
             },
