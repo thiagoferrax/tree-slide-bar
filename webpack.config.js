@@ -1,6 +1,5 @@
 const path = require('path')
 const webpack = require('webpack')
-const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
     mode: 'development',
@@ -11,7 +10,6 @@ module.exports = {
       library: '',
       libraryTarget: 'commonjs'
     },
-    externals: [nodeExternals()],
     module: {
         rules: [
             {
@@ -28,7 +26,7 @@ module.exports = {
                   loader: 'babel-loader',
                   options: {
                     presets: ['@babel/preset-env', '@babel/react'],
-                    plugins: ['@babel/plugin-proposal-object-rest-spread']                    
+th                    plugins: ['@babel/plugin-proposal-object-rest-spread']                    
                   }
                 }
             },
