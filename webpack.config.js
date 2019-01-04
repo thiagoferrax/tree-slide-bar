@@ -3,7 +3,7 @@ const webpack = require('webpack')
 const nodeExternals = require('webpack-node-externals')
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     entry: path.resolve(__dirname, 'src/lib/index.js'),
     output: {
         path: path.resolve(__dirname, './dist/lib'),
@@ -12,12 +12,6 @@ module.exports = {
         libraryTarget: 'commonjs'
     },
     externals: [nodeExternals()],
-    entry: path.resolve(__dirname, './src/lib/index.js'),
-    output: {
-        path: path.resolve(__dirname, './dist/lib'),
-        filename: 'index.js',
-        library: ''
-    },
     module: {
         rules: [
             {
