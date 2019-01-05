@@ -1,5 +1,6 @@
-import React from "react";
-import TreeSlideBar from "../lib";
+import React from 'react'
+
+import TreeSlideBar from 'tree-slide-bar'
 
 const App = () => (
   <div style={{ width: 640, margin: "15px auto" }}>
