@@ -5,7 +5,7 @@ module.exports = {
     mode: 'production',
     entry: path.resolve(__dirname, 'src/lib/index.js'),
     output: {
-        path: path.resolve(__dirname, './dist/lib'),
+        path: path.resolve(__dirname, './dist'),
         filename: 'index.js'        
     },
     module: {
@@ -32,10 +32,6 @@ module.exports = {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
                 use: [{
                     loader: 'file-loader',
-                    options: {
-                        name: '[name].[ext]',
-                        outputPath: 'fonts/'
-                    }
                 }]
             }
         ]
