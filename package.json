@@ -1,9 +1,9 @@
 {
   "name": "tree-slide-bar",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Get a tree with a slide bar that can be used in Redux Form as a checklist component.",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "files": [
     "dist"
   ],
