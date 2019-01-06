@@ -11,6 +11,10 @@
     margin-left: 10px;
 }
 
+.treeItemDescription div {
+    margin-left: 5px;
+}
+
 .treeItem:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
