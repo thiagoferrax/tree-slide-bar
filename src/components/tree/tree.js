@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Grid from '../layout/grid'
 import TreeItem from './treeItem'
 import './tree.css'
-import './dependencies'
 
 export default class Tree extends Component {  
 

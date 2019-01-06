@@ -5,7 +5,6 @@ import TreeSlideBar from 'tree-slide-bar'
 const App = () => (
   <div style={{ width: 640, margin: "15px auto" }}>
     <h1>TreeSlideBar Examples</h1>
-    <hr/>
     <TreeSlideBar cols='12' name='checklist' legend='Code Review Checklist' tree={[
       {
         "id": 1,
@@ -45,7 +44,7 @@ const App = () => (
         ]
       } 
     ]} />
-    <hr/>
+    <br/>
     <TreeSlideBar cols='12' name='checklist' legend='Basic Scrum Checklist' tree={[
       {
         "id": 7,
