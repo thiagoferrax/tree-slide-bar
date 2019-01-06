@@ -1,6 +1,6 @@
 {
   "name": "tree-slide-bar",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "Get a tree with a slide bar that can be used in Redux Form as a checklist component.",
   "author": "thiagoferrax",
   "license": "MIT",
@@ -54,7 +54,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^1.6.2",
     "rollup-plugin-url": "^1.4.0",
-    "bootstrap": "^4.2.1",
+    "bootstrap": "3.3.7",
     "ionicons": "^4.4.8"
   },
   "files": [
