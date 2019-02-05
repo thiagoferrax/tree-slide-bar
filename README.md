@@ -4,7 +4,7 @@
 
 [![NPM](https://img.shields.io/npm/v/tree-slide-bar.svg)](https://www.npmjs.com/package/tree-slide-bar) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-![mychecklist](https://user-images.githubusercontent.com/43149895/52291573-6da30200-2951-11e9-82f5-f0f920b21799.png)
+![mychecklist](https://user-images.githubusercontent.com/43149895/52291573-6da30200-2951-11e9-82f5-f0f920b21799.png?style=centerme)
 
 ## Install
 
