@@ -55,7 +55,7 @@ export default class Tree extends Component {
             const sum = brothers.reduce((accumulator, id) => accumulator + parseInt(valuesMap[id].value || 0), 0)
             const parentValue = sum/(brothers.length)
     
-            valuesMap[parentId] = {...valuesMap[parentId], value: parentValue} 
+            valuesMap[parentId] = {...valuesMap[parentId], value: parseInt(parentValue)} 
     
             this.refreshParentNodes(parentId, valuesMap)
         }
@@ -87,7 +87,7 @@ export default class Tree extends Component {
                     innerChildren.push(id)
                 }
     
-                valuesMap[id].value = newValue
+                valuesMap[id].value = parseInt(newValue)
                 this.refreshChildrenNodes(id, valuesMap, oldValue)
             })
     

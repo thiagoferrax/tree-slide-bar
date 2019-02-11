@@ -8,9 +8,10 @@ const MAX = 10
 export default props => {
     return (
         <If test={!props.hideSlideBar}>
-            <div>
+            <div className="sliderContent">
                 <input className={`slider ${getColor(props.node.value)}`} type="range" min={MIN} max={MAX}
                     id={`slide_${props.node.id}`} value={props.node.value || MIN} onChange={e => handleChange(e, props)} />
+                <div className="sliderValue">{props.node.value}</div>    
             </div>
         </If>        
     )
