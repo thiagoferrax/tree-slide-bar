@@ -23,8 +23,7 @@ import TreeSlideBar from 'tree-slide-bar'
 class Example extends Component {
   render () {
     return (
-      <TreeSlideBar cols='12' name='checklist' legend='Code Review Checklist' 
-      tree={[
+      <TreeSlideBar cols='12' name='checklist' tree={[
         {
             "id": 1,
             "description": "Code Review",
