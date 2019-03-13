@@ -146,7 +146,7 @@ const buildTree = (tree, onChange, props) => tree && tree.map(node => {
     const children = node.children
     const childrenTree = children.length && buildTree(children, onChange, props)
     return (
-        <TreeItem key={`node_${node.id}`} node={node} onChange={onChange} hideSlideBar={props.hideSlideBar} shrink={props.shrink && node.parentId == null} controls={props.controls} onEdit={props.onEdit} onDelete={props.onDelete}>
+        <TreeItem key={`node_${node.id}`} node={node} onChange={onChange} hideSlideBar={props.hideSlideBar} shrink={props.shrink && node.parentId != null} controls={props.controls} onEdit={props.onEdit} onDelete={props.onDelete}>
             {childrenTree}
         </TreeItem>
     )
