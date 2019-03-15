@@ -51,7 +51,7 @@ export default class TreeItem extends Component {
                                         </button>
                                     </If>
                                     <If test={this.props.onDelete} >
-                                        <button className='btn btn-default' onClick={e => { e.preventDefault(); this.props.onDelete(this.state.node) }} small='true'>
+                                        <button className='btn btn-danger' onClick={e => { e.preventDefault(); this.props.onDelete(this.state.node) }} small='true'>
                                             <i className='icon ion-md-trash'></i>
                                         </button>
                                     </If>
